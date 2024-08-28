@@ -1,0 +1,647 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'robotoblack';
+    src: url(../fuentes/Roboto-Black.ttf);
+}
+@font-face {
+    font-family: 'pacifico';
+    src: url(../fuentes/Pacifico-Regular.ttf);
+}
+body{
+    width:100%;
+    max-width:1920px;
+    min-width:360px;
+    margin: 0 auto;
+    font-family: 'robotoblack';
+}
+
+
+/* *************** -- HEADER Y NAV -- *************** */
+nav{
+    width: 100%;
+    height: 100px;
+    background: rgb(34,34,75);
+    background: linear-gradient(90deg, rgba(34,34,75,1) 0%, rgba(29,82,179,1) 8%, rgba(29,82,179,1) 30%, rgba(34,34,75,1) 50%, rgba(20,54,117,1) 70%, rgba(29,82,179,1) 91%, rgba(34,34,75,1) 100%);
+
+    position: fixed;
+    z-index: 10;
+    max-width:1920px;
+}
+#logo-nav{
+    width: auto;
+    height: 80px;
+    margin: 10px 40px;
+}
+#menu{
+    width: 65%;
+    float: right;
+    list-style: none;
+    
+}
+#menu a{
+    width: 15%;
+    height: 40px;
+    line-height: 40px;
+    margin: 30px 2%;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    float: left;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-family: 'robotoblack';
+    font-weight: 300;
+    transition: .5s;
+}
+
+#menu a:hover{
+    opacity: .5;
+    letter-spacing: 0.7px;
+}
+
+#btn-menu{
+    display: none;
+}
+nav label{
+    display: none;
+}
+header{
+    width:100%;
+}
+.video{
+    width:100%;
+}
+
+/* *************** --SECCION ACTIVIDADES-- *************** */
+
+#actisection {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(238, 226, 226);
+}
+
+.h3-actividades {
+    width: 40%;
+    margin: 30px 416px 60px 400px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    background-color: white;
+    border-style: double; 
+    border-radius: 20px;   
+    transition: .5s;
+  }
+  .h3-actividades:hover{
+    opacity: .5;
+    letter-spacing: 2px;
+    color: #40a8f9;
+    }
+/* SECCION NUTRICION  */
+
+#nutrisection {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(..//img/nutricion2.jpg);
+}
+
+/* SECCION SUPLEMENTACION  */
+
+#suplesection {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(..//img/bannersuples4.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -------- TARJETAS ACTIVIDADES - NUTRICION - SUPLEMENTACION --------  */
+.titulo-tarjeta {
+    font-size: 10px;
+    margin: 20px;
+    text-align: center;
+    background-color: black;
+    border-style: double; 
+    border-radius: 20px;   
+  }
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin:  40px;
+}
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background-color: #40a8f9;
+    text-align: center;
+}
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background-color: #40a8f9;
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+.card .back .link a {
+    color: #f3f3f3;
+}
+.card .back h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+.card .back p {
+    letter-spacing: 1px;
+} 
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+/* ***************--SECCION CONTACTO--*************** */
+
+#contacto {
+    width: 100%;
+    height: 550px;
+    display: block;
+    justify-content: center;  
+    align-items: center;
+    background-color: rgb(238, 226, 226);
+    padding: 40px 0px;
+}
+.info-contacto{
+    width: 27%;
+    margin: 148px 180px;
+    float:left;
+    height: 420px;
+}
+.h3-contacto{    
+    width: 100%;
+    height: 85px;
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 0px 30px;
+    text-align: center;
+    line-height: 40px;
+    background: white;
+    color: black;
+    font-family: 'robotoblack';
+    font-weight: 300;
+    transition: .5s;
+}
+.h3-contacto:hover{
+opacity: .5;
+letter-spacing: 2px;
+color: #40a8f9;
+}
+.h3-titulo-contacto {
+    width: 40%;
+    margin:10px 450px -90px 412px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    background-color: white;
+    border-style: double; 
+    border-radius: 20px;   
+    transition: .5s;
+  }
+  .h3-titulo-contacto:hover{
+    opacity: .5;
+    letter-spacing: 2px;
+    color: #40a8f9;
+    }
+#imgcontacto{
+        width: 33%;
+        height: 33%;
+        margin: 192px 33px;
+        float: left;
+}
+.imgcontacto{
+    width: 90%;
+    height: 155%;
+    border-radius: 60px;
+
+}
+
+.icon-contacto{
+    width: 17px;
+}
+
+/* ***************--FOOTER--***************  */
+footer{
+    width:100%;
+    height: 200px;
+    float:left;
+    text-align: center;
+    background: rgb(34,34,75);
+    background: linear-gradient(90deg, rgba(34,34,75,1) 0%, rgba(29,82,179,1) 8%, rgba(29,82,179,1) 30%, rgba(34,34,75,1) 50%, rgba(20,54,117,1) 70%, rgba(29,82,179,1) 91%, rgba(34,34,75,1) 100%);
+}
+.img-redes{
+    width:100px;
+    margin:50px 10px;
+    transition: .3s;
+
+}
+.img-redes:hover{
+    opacity: .5;
+}
+
+/* *************** BOTON WHATSAPP ***************  */
+.btn_wp{
+    width: 80px;
+    position: fixed;
+    float: left;
+    z-index: 100;
+    right: 20px;
+    bottom: 20px;
+    animation-name: animacion1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.img-wp{
+    width: 100%;
+}
+.btn_wp:hover{
+    opacity: .5;
+}
+/* *************** RESPONSIVE ***************  */
+/* *************** MEDIAS QUERYS ***************  */
+/* *************** ------------- ***************  */
+
+
+@media (min-width: 320px) and (max-width: 340px){
+    #menu{
+        display: none; }
+    nav {
+        width: 100%;}
+    .video {
+        width: 119%;
+        height: 300px;    
+        margin-bottom: -35px;}
+    #actisection {
+        width: 119%;}
+    .h3-actividades {
+        width: 59%;
+        padding: 5px;
+        margin: 30px 3px 35px 6px;}
+    #ejercicios {
+        width: 119%;
+        height: 500px;}
+    .h3-ejercicios {
+        margin: 40px 103px 0px;}
+    .img_carusel_cont {
+        width: 300px;
+        height: 300px;}
+    button {
+        width: 40px;
+        height: 40px;
+        margin: 10px;}
+    #nutrisection {
+        width: 119%;}
+    #suplesection {
+        width: 119%;}
+    #contacto {
+            width: 119%;}
+    .h3-titulo-contacto {
+            width: 50%;
+            margin: 10px 178px -90px 106px;}
+    .h3-contacto {
+            width: 200%;
+            margin: -11px 70px 46px -111px;
+            font-size: 12px;}
+    #mapa {
+        width: 65%;
+        height: 32%;
+        margin: -203px 6px 30px 74px; }
+    footer {
+        width: 119%;
+        height: 120px;}
+    .img-wp {
+        width: 83%;
+        margin: 10px 2px 76px 18px;}   
+    .img-redes {
+        width: 58px;
+        margin: 33px 7px 0px 11px;}
+
+}
+
+
+@media (min-width: 341px) and (max-width: 374px){
+    #menu{
+        display: none; }
+    .video {
+        width: 116%;
+        height: 372px;
+        margin: 0px 10px -74px 0px;}
+    nav {
+        width: 100%;}
+    /* ACTIVIDADES */
+    #actisection {
+        width: 116%;}
+    .h3-actividades {
+        width: 70%;
+        padding: 10px;
+    }
+    /* EJERCICIOS */
+
+    .h3-ejercicios {
+        margin: 65px 104px;
+}
+    #ejercicios {
+        width: 113%;
+        height: 422px;}
+
+    .img_carusel_cont {
+        width: 199px;
+        height: 205px;
+    }
+    button {
+        width: 35px;
+        height: 35px;
+    }
+    .center{
+        margin: -200px 0px;
+    }
+    #nutrisection {
+        width: 113%;}
+    #suplesection {
+        width: 113%;}
+    #contacto {
+        width: 114%;}
+    .h3-titulo-contacto {
+        width: 50%;
+        margin: 10px 200px -90px 100px;}
+    .h3-contacto {
+        width: 200%;
+        margin: -11px 70px 46px -116px;
+        font-size: 15px;}
+    #mapa {
+            width: 65%;
+            height: 32%;
+            margin: -203px 6px 30px 71px; }
+    footer {
+        width: 114%;
+        height: 120px;}
+    .img-wp {
+        width: 83%;
+        margin: 10px 2px 76px 12px;}   
+    .img-redes {
+        width: 60px;
+        margin: 32px 10px 0px 10px;}
+}
+@media (min-width: 375px) and (max-width: 399px){
+    #menu{
+        display: none; }
+    nav {
+        width: 100%;}
+    .video {
+        width: 114%;
+        height: 300px;    
+        margin-bottom: -35px;}
+    #actisection {
+        width: 114%;}
+    .h3-actividades {
+        width: 59%;
+        padding: 5px;
+        margin: 30px 3px 35px 6px;}
+    #ejercicios {
+        width: 114%;
+        height: 500px;}
+    .h3-ejercicios {
+        margin: 40px 103px 0px;}
+    .img_carusel_cont {
+        width: 300px;
+        height: 300px;}
+    button {
+        width: 40px;
+        height: 40px;
+        margin: 10px;}
+    #nutrisection {
+        width: 114%;}
+    #suplesection {
+        width: 114%;}
+    #contacto {
+            width: 114%;}
+    .h3-titulo-contacto {
+            width: 50%;
+            margin: 10px 178px -90px 106px;}
+    .h3-contacto {
+            width: 200%;
+            margin: -11px 70px 46px -111px;
+            font-size: 12px;}
+    #mapa {
+        width: 65%;
+        height: 32%;
+        margin: -203px 6px 30px 74px; }
+    footer {
+        width: 114%;
+        height: 120px;}
+    .img-wp {
+        width: 83%;
+        margin: 10px 2px 76px 18px;}   
+    .img-redes {
+        width: 58px;
+        margin: 33px 7px 0px 11px;}        
+}
+
+
+@media (min-width: 400px) and (max-width: 600px){
+    #menu{
+        display: none;}
+    nav {
+        width: 99%;}
+    .video {
+            width: 133%;
+            height: 400px;
+            margin: -56px;}   
+    #actisection {
+        width: 119%;}
+    .center {
+            margin: -90px 0px;}
+    .h3-actividades {
+            width: 54%;
+            margin: 20px 200px 30px 206px}
+    #ejercicios {
+        width: 119%;
+        height: 600px;}
+    .h3-ejercicios {
+            width: 50%;
+            height: 40px;
+            margin: 40px 88px;}
+    .img_carusel_cont {
+            width: 340px;
+            height: 345px;}
+    button {
+            width: 40px;
+            height: 40px;
+            margin: 20px 6px 10px 5px;}
+    #nutrisection {
+           width: 119%;}
+    #suplesection {
+            width: 119%;}
+    #contacto {
+            width: 119%;}
+    .h3-titulo-contacto {
+            width: 50%;
+            margin: 10px 200px -90px 112px;}
+    .h3-contacto {
+            width: 200%;
+            margin: -11px 70px 46px -101px;
+            font-size: 15px;}
+    #mapa {
+            width: 75%;
+            height: 38%;
+            margin: -203px 6px 30px 58px;}
+    footer {
+            width: 119%;
+            height: 150px;}
+    .img-wp {
+            width: 83%;
+            margin: 10px 2px 10px -4px;}    
+    .img-redes {
+                width: 78px;
+                margin: 35px 7px 0px 11px;}   
+}
+
+@media (min-width: 768px) and (max-width: 800px){
+    /* #menu{
+        display: none;} */
+    .h3-actividades {
+        margin: 30px 401px 60px 400px;
+        padding: 3px 60px;}
+    .h3-ejercicios {
+        margin: 40px 220px;}
+    #contacto {
+            height: 450px;}
+    .h3-titulo-contacto {
+        margin: 10px 200px -90px 221px;}
+    .info-contacto {
+            margin: 120px 100px -48px 82px;
+            font-size: 10px;}
+    .h3-contacto {
+                margin: 21px 20px 8px -10px;}
+    #mapa {
+            width: 38%;
+            height: 55%;
+            margin: 169px 26px 10px 10px;}
+    #menu a {
+            width: 15.5%; height: 28px; line-height: 33px; margin: 35px 2.4px; font-size: 8px; }
+                
+}
+
+@media (min-width: 801px) and (max-width: 1000px){
+       #menu{
+        display: none;}
+        .h3-actividades {
+        margin: 30px 315px 60px 315px;}
+        .h3-ejercicios {
+        margin: 40px 298px;}
+    #contacto {
+        height: 558px;}
+    .h3-titulo-contacto {
+        margin: 8px 280px -90px 290px;}
+    .h3-contacto {
+        margin: 21px 20px 8px -10px;
+        font-size: 15px;}
+    .info-contacto {
+        margin: 143px 96px 10px 132px;}
+    #mapa {
+        height: 50%;
+        margin: 170px 33px 0px 33px;}
+}
+
+
+@media (min-width: 1001px) and (max-width: 1100px){
+    #menu a{
+        font-size: 8px;
+    }
+    .h3-ejercicios {
+        margin: 63px 303px;}
+    .h3-titulo-contacto {
+            margin: 0px 248px -90px 306px;}
+    .actividades-p {
+        margin-bottom: 60px;}
+    .h3-actividades {
+        margin: 20px 264px 20px 264px;}
+    #contacto {
+            height: 558px;}
+    .h3-contacto{
+        font-size: 15px;
+        margin: 44px 0px 10px -68px;}
+    .info-contacto { 
+        margin: 148px 85px 10px 175px;}
+    #mapa {
+        height: 50%;
+        margin: 215px 33px 0px 33px;}
+}
+@media (min-width: 1101px) and (max-width: 1300px){
+    #menu a{
+        font-size: 8px;} 
+    .h3-actividades {
+        margin: 30px 416px 60px 422px;}
+    .h3-ejercicios {
+        margin: 63px 353px;}
+    .h3-titulo-contacto {
+        margin: 10px 450px -90px 350px;}
+    .info-contacto {
+        margin: 148px 152px;}
+    }
+
+@media (min-width: 1367px) and (max-width: 1439px){
+    
+
+}
+
+@media (min-width: 1440px) and (max-width: 1600px){
+    .h3-actividades {
+        margin: 30px 380px 60px 400px;}
+    .h3-ejercicios {
+            margin: 41px 440px 20px;}
+        
+}
